@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video player</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="./assets/favicon.ico" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video player</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="./assets/favicon.ico" />
-</head>
-
-<body>
-  <div class="container">
+  <body>
     <div class="video-section__player">
       <div class="hot-key__inner">
         <ul class="hot-key__list">
@@ -33,11 +31,17 @@
           </li>
           <li class="hot-key__item">
             <p class="hot-key__name">L</p>
-            <p class="hot-key__desc">Speed<br> x 1</p>
+            <p class="hot-key__desc">
+              Speed<br />
+              x 1
+            </p>
           </li>
           <li class="hot-key__item">
             <p class="hot-key__name">&gt;</p>
-            <p class="hot-key__desc">Speed<br> x 2</p>
+            <p class="hot-key__desc">
+              Speed<br />
+              x 2
+            </p>
           </li>
           <li class="hot-key__item">
             <p class="hot-key__name">&larr;</p>
@@ -49,71 +53,124 @@
           </li>
         </ul>
       </div>
-      <video class="video-section__viewer" width="600px" height="394px"></video>
+      <video class="video-section__viewer"></video>
       <button class="video-section__btn-play play"></button>
       <div class="video-section__control">
         <div class="video-section__buttons">
-          <button class="video-section__btn btn-prev btn-control" disabled></button>
-          <button class="video-section__btn btn-play btn-control play" id="play"></button>
+          <button
+            class="video-section__btn btn-prev btn-control"
+            disabled
+          ></button>
+          <button
+            class="video-section__btn btn-play btn-control play"
+            id="play"
+          ></button>
           <button class="video-section__btn btn-next btn-control"></button>
         </div>
-        <input class="video-section__progress input-range" type="range" value="0" min="0" max="100">
+        <input
+          class="video-section__progress input-range"
+          type="range"
+          value="0"
+          min="0"
+          max="100"
+        />
         <div class="video-section__volume">
           <button class="video-section__btn-volume btn-control"></button>
-          <input class="video-section__volume-control input-range" type="range" value="100" min="0" max="100">
+          <input
+            class="video-section__volume-control input-range"
+            type="range"
+            value="100"
+            min="0"
+            max="100"
+          />
         </div>
         <div class="video-section__scale">
           <button class="video-section__btn-scale btn-control"></button>
         </div>
       </div>
     </div>
-    <div class="video-library slider">
-      <div class="slider__buttons">
-        <button class="slider__btn-prev btn-slider"></button>
-        <button class="slider__btn-next btn-slider"></button>
+    <ul class="video-library__list fullscreen-library">
+      <li class="video-library__item">
+        <video
+          class="video-library__video"
+          src="./assets/video/video1.mp4"
+        ></video>
+        <h2 class="video-library__title">
+          Diesel locomotive TEP60-0750 in the Vitebsk depot
+        </h2>
+      </li>
+      <li class="video-library__item">
+        <video
+          class="video-library__video"
+          src="./assets/video/video2.mp4"
+        ></video>
+        <h2 class="video-library__title">
+          Diesel locomotive TEP60-0444 at Vilnius station
+        </h2>
+      </li>
+      <li class="video-library__item">
+        <video
+          class="video-library__video"
+          src="./assets/video/video3.mp4"
+        ></video>
+        <h2 class="video-library__title">
+          Diesel locomotive TEP60-0750 follows in reserve
+        </h2>
+      </li>
+      <li class="video-library__item">
+        <video
+          class="video-library__video"
+          src="./assets/video/video4.mp4"
+        ></video>
+        <h2 class="video-library__title">
+          Diesel locomotive M62-1161 at the station. Mogilev-2
+        </h2>
+      </li>
+      <li class="video-library__item">
+        <video
+          class="video-library__video"
+          src="./assets/video/video5.mp4"
+        ></video>
+        <h2 class="video-library__title">Return of the pusher to Bessarabka</h2>
+      </li>
+      <li class="video-library__item">
+        <video
+          class="video-library__video"
+          src="./assets/video/video6.mp4"
+        ></video>
+        <h2 class="video-library__title">
+          Diesel locomotive TEP70-519 with a passenger train
+          Priobye-Yekaterinburg
+        </h2>
+      </li>
+      <li class="video-library__item">
+        <video
+          class="video-library__video"
+          src="./assets/video/video7.mp4"
+        ></video>
+        <h2 class="video-library__title">
+          Diesel locomotive М62-1633 with freight train
+        </h2>
+      </li>
+      <li class="video-library__item">
+        <video
+          class="video-library__video"
+          src="./assets/video/video8.mp4"
+        ></video>
+        <h2 class="video-library__title">Diesel locomotive TE3</h2>
+      </li>
+      <li class="video-library__item">
+        <video
+          class="video-library__video"
+          src="./assets/video/video9.mp4"
+        ></video>
+        <h2 class="video-library__title">
+          Diesel locomotive 2TE116-454, section Volkovskaya -
+          SPb-Tovarny-Vitebsky
+        </h2>
+      </li>
+    </ul>
 
-      </div>
-      <ul class="video-library__list slider-list">
-        <li class="video-library__item">
-          <video class="video-library__video" src="./assets/video/video1.mp4" width="300px" height="200px"></video>
-          <h2 class="video-library__title">Diesel locomotive TEP60-0750 in the Vitebsk depot</h2>
-        </li>
-        <li class="video-library__item">
-          <video class="video-library__video" src="./assets/video/video2.mp4" width="300px" height="200px"></video>
-          <h2 class="video-library__title">Diesel locomotive TEP60-0444 at Vilnius station</h2>
-        </li>
-        <li class="video-library__item">
-          <video class="video-library__video" src="./assets/video/video3.mp4" width="300px" height="200px"></video>
-          <h2 class="video-library__title">Diesel locomotive TEP60-0750 follows in reserve</h2>
-        </li>
-        <li class="video-library__item">
-          <video class="video-library__video" src="./assets/video/video4.mp4" width="300px" height="200px"></video>
-          <h2 class="video-library__title">Diesel locomotive M62-1161 at the station. Mogilev-2</h2>
-        </li>
-        <li class="video-library__item">
-          <video class="video-library__video" src="./assets/video/video5.mp4" width="300px" height="200px"></video>
-          <h2 class="video-library__title">Return of the pusher to Bessarabka</h2>
-        </li>
-        <li class="video-library__item">
-          <video class="video-library__video" src="./assets/video/video6.mp4" width="300px" height="200px"></video>
-          <h2 class="video-library__title">Diesel locomotive TEP70-519 with a passenger train Priobye-Yekaterinburg</h2>
-        </li>
-        <li class="video-library__item">
-          <video class="video-library__video" src="./assets/video/video7.mp4" width="300px" height="200px"></video>
-          <h2 class="video-library__title">Diesel locomotive М62-1633 with freight train</h2>
-        </li>
-        <li class="video-library__item">
-          <video class="video-library__video" src="./assets/video/video8.mp4" width="300px" height="200px"></video>
-          <h2 class="video-library__title">Diesel locomotive TE3</h2>
-        </li>
-        <li class="video-library__item">
-          <video class="video-library__video" src="./assets/video/video9.mp4" width="300px" height="200px"></video>
-          <h2 class="video-library__title">Diesel locomotive 2TE116-454, section Volkovskaya - SPb-Tovarny-Vitebsky</h2>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <script src="main.js"></script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
